@@ -1,0 +1,5 @@
+class User
+instance variables
+  creates:Reservation;
+
+end User

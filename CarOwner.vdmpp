@@ -1,0 +1,5 @@
+class CarOwner
+instance variables
+  owns:set of (Vehicle);
+
+end CarOwner

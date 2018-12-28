@@ -1,0 +1,6 @@
+class Vehicle
+instance variables
+  vehicleInfo:VehicleInfo;
+  isReserved:Reservation;
+
+end Vehicle

@@ -1,0 +1,8 @@
+class Insurance
+types
+  public InsuranceType = ();
+
+instance variables
+  reservationInsurance:set of (Reservation);
+
+end Insurance

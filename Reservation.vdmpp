@@ -1,0 +1,5 @@
+class Reservation
+instance variables
+  booking:Booking;
+
+end Reservation
