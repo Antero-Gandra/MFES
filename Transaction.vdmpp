@@ -1,6 +1,0 @@
-class Transaction
-instance variables
-  depositPayment:Reservation;
-  bookingPayment:Booking;
-
-end Transaction

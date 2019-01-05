@@ -1,97 +1,165 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_bDAVwArAEemBLfN8dotJHQ" name="turo">
-  <eAnnotations xmi:id="_bDCyAArAEemBLfN8dotJHQ" source="Objing">
-    <contents xmi:type="uml:Property" xmi:id="_bDCyAQrAEemBLfN8dotJHQ" name="exporterVersion">
-      <defaultValue xmi:type="uml:LiteralString" xmi:id="_bDCyAgrAEemBLfN8dotJHQ" value="3.0.0"/>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_FnCOABEDEemep-lZ9VLm1Q" name="turo">
+  <eAnnotations xmi:id="_FnCOAREDEemep-lZ9VLm1Q" source="Objing">
+    <contents xmi:type="uml:Property" xmi:id="_FnCOAhEDEemep-lZ9VLm1Q" name="exporterVersion">
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_FnCOAxEDEemep-lZ9VLm1Q" value="3.0.0"/>
     </contents>
   </eAnnotations>
-  <packagedElement xmi:type="uml:Class" xmi:id="_bDCyAwrAEemBLfN8dotJHQ" name="User">
-    <ownedAttribute xmi:id="_bDCyBArAEemBLfN8dotJHQ" name="creates" visibility="public" type="_bDDZFQrAEemBLfN8dotJHQ" association="_bDCyCgrAEemBLfN8dotJHQ"/>
-    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_bDCyBQrAEemBLfN8dotJHQ" name="Name"/>
-    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_bDCyBgrAEemBLfN8dotJHQ" name="Email"/>
-    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_bDCyBwrAEemBLfN8dotJHQ" name="PhoneNumber"/>
-    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_bDCyCArAEemBLfN8dotJHQ" name="Location"/>
-    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_bDCyCQrAEemBLfN8dotJHQ" name="BirthDate"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_FnCOBBEDEemep-lZ9VLm1Q" name="User">
+    <ownedAttribute xmi:id="_FnCOBREDEemep-lZ9VLm1Q" name="creates" visibility="public" type="_FnC1EREDEemep-lZ9VLm1Q" association="_FnCOCxEDEemep-lZ9VLm1Q"/>
+    <ownedAttribute xmi:id="_FnCOBhEDEemep-lZ9VLm1Q" name="Name" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_FnCOBxEDEemep-lZ9VLm1Q" name="Email" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_FnCOCBEDEemep-lZ9VLm1Q" name="PhoneNumber" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_FnCOCREDEemep-lZ9VLm1Q" name="Location" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_FnCOChEDEemep-lZ9VLm1Q" name="BirthDate" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+    </ownedAttribute>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_bDCyCgrAEemBLfN8dotJHQ" memberEnd="_bDCyBArAEemBLfN8dotJHQ _bDCyCwrAEemBLfN8dotJHQ">
-    <ownedEnd xmi:id="_bDCyCwrAEemBLfN8dotJHQ" visibility="public" type="_bDCyAwrAEemBLfN8dotJHQ" association="_bDCyCgrAEemBLfN8dotJHQ"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_FnCOCxEDEemep-lZ9VLm1Q" memberEnd="_FnCOBREDEemep-lZ9VLm1Q _FnCODBEDEemep-lZ9VLm1Q">
+    <ownedEnd xmi:id="_FnCODBEDEemep-lZ9VLm1Q" visibility="public" type="_FnCOBBEDEemep-lZ9VLm1Q" association="_FnCOCxEDEemep-lZ9VLm1Q"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_bDCyDArAEemBLfN8dotJHQ" name="VehicleInfo">
-    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_bDCyDQrAEemBLfN8dotJHQ" name="Seats"/>
-    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_bDCyDgrAEemBLfN8dotJHQ" name="Doors"/>
-    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_bDCyDwrAEemBLfN8dotJHQ" name="Model"/>
-    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_bDCyEArAEemBLfN8dotJHQ" name="Year"/>
-    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_bDCyEQrAEemBLfN8dotJHQ" name="FuelType"/>
-    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_bDCyEgrAEemBLfN8dotJHQ" name="Type"/>
-    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_bDCyEwrAEemBLfN8dotJHQ" name="Brand"/>
-    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_bDCyFArAEemBLfN8dotJHQ" name="Color"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_FnCODREDEemep-lZ9VLm1Q" name="VehicleInfo">
+    <ownedAttribute xmi:id="_FnCODhEDEemep-lZ9VLm1Q" name="Seats" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_FnCODxEDEemep-lZ9VLm1Q" name="Doors" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_FnCOEBEDEemep-lZ9VLm1Q" name="Model" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_FnCOEREDEemep-lZ9VLm1Q" name="Year" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_FnCOEhEDEemep-lZ9VLm1Q" name="FuelType" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_FnCOExEDEemep-lZ9VLm1Q" name="Type" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_FnCOFBEDEemep-lZ9VLm1Q" name="Brand" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_FnCOFREDEemep-lZ9VLm1Q" name="Color" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_bDCyFQrAEemBLfN8dotJHQ" name="Vehicle">
-    <ownedAttribute xmi:id="_bDCyFgrAEemBLfN8dotJHQ" name="vehicleInfo" visibility="public" type="_bDCyDArAEemBLfN8dotJHQ" association="_bDCyHgrAEemBLfN8dotJHQ"/>
-    <ownedAttribute xmi:id="_bDCyFwrAEemBLfN8dotJHQ" name="isReserved" visibility="public" type="_bDDZFQrAEemBLfN8dotJHQ" association="_bDCyIQrAEemBLfN8dotJHQ"/>
-    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_bDCyGArAEemBLfN8dotJHQ" name="DailyPrice"/>
-    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_bDCyGQrAEemBLfN8dotJHQ" name="Description"/>
-    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_bDCyGgrAEemBLfN8dotJHQ" name="Rating"/>
-    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_bDCyGwrAEemBLfN8dotJHQ" name="NumberTrips"/>
-    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_bDCyHArAEemBLfN8dotJHQ" name="PlateNumber"/>
-    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_bDCyHQrAEemBLfN8dotJHQ" name="Odometer"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_FnCOFhEDEemep-lZ9VLm1Q" name="Vehicle">
+    <ownedAttribute xmi:id="_FnCOFxEDEemep-lZ9VLm1Q" name="vehicleInfo" visibility="public" type="_FnCODREDEemep-lZ9VLm1Q" association="_FnCOHxEDEemep-lZ9VLm1Q"/>
+    <ownedAttribute xmi:id="_FnCOGBEDEemep-lZ9VLm1Q" name="isReserved" visibility="public" type="_FnC1EREDEemep-lZ9VLm1Q" association="_FnCOIhEDEemep-lZ9VLm1Q"/>
+    <ownedAttribute xmi:id="_FnCOGREDEemep-lZ9VLm1Q" name="DailyPrice" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_FnCOGhEDEemep-lZ9VLm1Q" name="Description" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_FnCOGxEDEemep-lZ9VLm1Q" name="Rating" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_FnCOHBEDEemep-lZ9VLm1Q" name="NumberTrips" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_FnCOHREDEemep-lZ9VLm1Q" name="Plate" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_FnCOHhEDEemep-lZ9VLm1Q" name="Odometer" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_bDCyHgrAEemBLfN8dotJHQ" memberEnd="_bDCyFgrAEemBLfN8dotJHQ _bDCyHwrAEemBLfN8dotJHQ">
-    <ownedEnd xmi:id="_bDCyHwrAEemBLfN8dotJHQ" visibility="public" type="_bDCyFQrAEemBLfN8dotJHQ" association="_bDCyHgrAEemBLfN8dotJHQ">
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bDCyIArAEemBLfN8dotJHQ" value="*"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_FnCOHxEDEemep-lZ9VLm1Q" memberEnd="_FnCOFxEDEemep-lZ9VLm1Q _FnCOIBEDEemep-lZ9VLm1Q">
+    <ownedEnd xmi:id="_FnCOIBEDEemep-lZ9VLm1Q" visibility="public" type="_FnCOFhEDEemep-lZ9VLm1Q" association="_FnCOHxEDEemep-lZ9VLm1Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FnCOIREDEemep-lZ9VLm1Q" value="*"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_bDCyIQrAEemBLfN8dotJHQ" memberEnd="_bDCyFwrAEemBLfN8dotJHQ _bDCyIgrAEemBLfN8dotJHQ">
-    <ownedEnd xmi:id="_bDCyIgrAEemBLfN8dotJHQ" visibility="public" type="_bDCyFQrAEemBLfN8dotJHQ" association="_bDCyIQrAEemBLfN8dotJHQ"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_FnCOIhEDEemep-lZ9VLm1Q" memberEnd="_FnCOGBEDEemep-lZ9VLm1Q _FnCOIxEDEemep-lZ9VLm1Q">
+    <ownedEnd xmi:id="_FnCOIxEDEemep-lZ9VLm1Q" visibility="public" type="_FnCOFhEDEemep-lZ9VLm1Q" association="_FnCOIhEDEemep-lZ9VLm1Q"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_bDCyIwrAEemBLfN8dotJHQ" name="CarOwner">
-    <generalization xmi:id="_bDCyJArAEemBLfN8dotJHQ" general="_bDCyAwrAEemBLfN8dotJHQ"/>
-    <ownedAttribute xmi:id="_bDCyJQrAEemBLfN8dotJHQ" name="owns" visibility="public" type="_bDCyFQrAEemBLfN8dotJHQ" association="_bDCyKgrAEemBLfN8dotJHQ">
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bDCyJgrAEemBLfN8dotJHQ" value="*"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_FnCOJBEDEemep-lZ9VLm1Q" name="CarOwner">
+    <generalization xmi:id="_FnCOJREDEemep-lZ9VLm1Q" general="_FnCOBBEDEemep-lZ9VLm1Q"/>
+    <ownedAttribute xmi:id="_FnCOJhEDEemep-lZ9VLm1Q" name="owns" visibility="public" type="_FnCOFhEDEemep-lZ9VLm1Q" association="_FnCOKxEDEemep-lZ9VLm1Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FnCOJxEDEemep-lZ9VLm1Q" value="*"/>
     </ownedAttribute>
-    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_bDCyJwrAEemBLfN8dotJHQ" name="Rating"/>
-    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_bDCyKArAEemBLfN8dotJHQ" name="ResponseRate"/>
-    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_bDCyKQrAEemBLfN8dotJHQ" name="TripNumber"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_bDCyKgrAEemBLfN8dotJHQ" memberEnd="_bDCyJQrAEemBLfN8dotJHQ _bDCyKwrAEemBLfN8dotJHQ">
-    <ownedEnd xmi:id="_bDCyKwrAEemBLfN8dotJHQ" visibility="public" type="_bDCyIwrAEemBLfN8dotJHQ" association="_bDCyKgrAEemBLfN8dotJHQ"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_bDCyLArAEemBLfN8dotJHQ" name="Insurance">
-    <ownedAttribute xmi:id="_bDCyLQrAEemBLfN8dotJHQ" name="reservationInsurance" visibility="public" type="_bDDZFQrAEemBLfN8dotJHQ" association="_bDDZEwrAEemBLfN8dotJHQ">
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bDCyLgrAEemBLfN8dotJHQ" value="*"/>
+    <ownedAttribute xmi:id="_FnCOKBEDEemep-lZ9VLm1Q" name="Rating" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
     </ownedAttribute>
-    <nestedClassifier xmi:type="uml:Enumeration" xmi:id="_bDDZEArAEemBLfN8dotJHQ" name="InsuranceType"/>
-    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_bDDZEQrAEemBLfN8dotJHQ" name="Price"/>
-    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_bDDZEgrAEemBLfN8dotJHQ" name="DepositValue"/>
+    <ownedAttribute xmi:id="_FnCOKREDEemep-lZ9VLm1Q" name="ResponseRate" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_FnCOKhEDEemep-lZ9VLm1Q" name="TripNumber" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_bDDZEwrAEemBLfN8dotJHQ" memberEnd="_bDCyLQrAEemBLfN8dotJHQ _bDDZFArAEemBLfN8dotJHQ">
-    <ownedEnd xmi:id="_bDDZFArAEemBLfN8dotJHQ" visibility="public" type="_bDCyLArAEemBLfN8dotJHQ" association="_bDDZEwrAEemBLfN8dotJHQ"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_FnCOKxEDEemep-lZ9VLm1Q" memberEnd="_FnCOJhEDEemep-lZ9VLm1Q _FnCOLBEDEemep-lZ9VLm1Q">
+    <ownedEnd xmi:id="_FnCOLBEDEemep-lZ9VLm1Q" visibility="public" type="_FnCOJBEDEemep-lZ9VLm1Q" association="_FnCOKxEDEemep-lZ9VLm1Q"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_bDDZFQrAEemBLfN8dotJHQ" name="Reservation">
-    <ownedAttribute xmi:id="_bDDZFgrAEemBLfN8dotJHQ" name="booking" visibility="public" type="_bDDZHArAEemBLfN8dotJHQ" association="_bDDZGgrAEemBLfN8dotJHQ"/>
-    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_bDDZFwrAEemBLfN8dotJHQ" name="Price"/>
-    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_bDDZGArAEemBLfN8dotJHQ" name="StartDate"/>
-    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_bDDZGQrAEemBLfN8dotJHQ" name="EndDate"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_FnCOLREDEemep-lZ9VLm1Q" name="Insurance">
+    <ownedAttribute xmi:id="_FnCOLhEDEemep-lZ9VLm1Q" name="reservationInsurance" visibility="public" type="_FnC1EREDEemep-lZ9VLm1Q" association="_FnCOMxEDEemep-lZ9VLm1Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FnCOLxEDEemep-lZ9VLm1Q" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_FnCOMBEDEemep-lZ9VLm1Q" name="InsuranceType" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_FnCOMREDEemep-lZ9VLm1Q" name="Price" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_FnCOMhEDEemep-lZ9VLm1Q" name="DepositValue" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+    </ownedAttribute>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_bDDZGgrAEemBLfN8dotJHQ" memberEnd="_bDDZFgrAEemBLfN8dotJHQ _bDDZGwrAEemBLfN8dotJHQ">
-    <ownedEnd xmi:id="_bDDZGwrAEemBLfN8dotJHQ" visibility="public" type="_bDDZFQrAEemBLfN8dotJHQ" association="_bDDZGgrAEemBLfN8dotJHQ"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_FnCOMxEDEemep-lZ9VLm1Q" memberEnd="_FnCOLhEDEemep-lZ9VLm1Q _FnC1EBEDEemep-lZ9VLm1Q">
+    <ownedEnd xmi:id="_FnC1EBEDEemep-lZ9VLm1Q" visibility="public" type="_FnCOLREDEemep-lZ9VLm1Q" association="_FnCOMxEDEemep-lZ9VLm1Q"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_bDDZHArAEemBLfN8dotJHQ" name="Booking">
-    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_bDDZHQrAEemBLfN8dotJHQ" name="Price"/>
-    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_bDDZHgrAEemBLfN8dotJHQ" name="FuelPrice"/>
-    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_bDDZHwrAEemBLfN8dotJHQ" name="FuelUsed"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_FnC1EREDEemep-lZ9VLm1Q" name="Reservation">
+    <ownedAttribute xmi:id="_FnC1EhEDEemep-lZ9VLm1Q" name="booking" visibility="public" type="_FnC1GBEDEemep-lZ9VLm1Q" association="_FnC1FhEDEemep-lZ9VLm1Q"/>
+    <ownedAttribute xmi:id="_FnC1ExEDEemep-lZ9VLm1Q" name="Price" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_FnC1FBEDEemep-lZ9VLm1Q" name="StartDate" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_FnC1FREDEemep-lZ9VLm1Q" name="EndDate" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+    </ownedAttribute>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_bDDZIArAEemBLfN8dotJHQ" name="Transaction">
-    <ownedAttribute xmi:id="_bDDZIQrAEemBLfN8dotJHQ" name="depositPayment" visibility="public" type="_bDDZFQrAEemBLfN8dotJHQ" association="_bDDZJgrAEemBLfN8dotJHQ"/>
-    <ownedAttribute xmi:id="_bDDZIgrAEemBLfN8dotJHQ" name="bookingPayment" visibility="public" type="_bDDZHArAEemBLfN8dotJHQ" association="_bDDZKArAEemBLfN8dotJHQ"/>
-    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_bDDZIwrAEemBLfN8dotJHQ" name="Amount"/>
-    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_bDDZJArAEemBLfN8dotJHQ" name="Reference"/>
-    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_bDDZJQrAEemBLfN8dotJHQ" name="TransDate"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_FnC1FhEDEemep-lZ9VLm1Q" memberEnd="_FnC1EhEDEemep-lZ9VLm1Q _FnC1FxEDEemep-lZ9VLm1Q">
+    <ownedEnd xmi:id="_FnC1FxEDEemep-lZ9VLm1Q" visibility="public" type="_FnC1EREDEemep-lZ9VLm1Q" association="_FnC1FhEDEemep-lZ9VLm1Q"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_bDDZJgrAEemBLfN8dotJHQ" memberEnd="_bDDZIQrAEemBLfN8dotJHQ _bDDZJwrAEemBLfN8dotJHQ">
-    <ownedEnd xmi:id="_bDDZJwrAEemBLfN8dotJHQ" visibility="public" type="_bDDZIArAEemBLfN8dotJHQ" association="_bDDZJgrAEemBLfN8dotJHQ"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_FnC1GBEDEemep-lZ9VLm1Q" name="Booking">
+    <ownedAttribute xmi:id="_FnC1GREDEemep-lZ9VLm1Q" name="Price" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_FnC1GhEDEemep-lZ9VLm1Q" name="FuelPrice" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_FnC1GxEDEemep-lZ9VLm1Q" name="FuelUsed" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+    </ownedAttribute>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_bDDZKArAEemBLfN8dotJHQ" memberEnd="_bDDZIgrAEemBLfN8dotJHQ _bDDZKQrAEemBLfN8dotJHQ">
-    <ownedEnd xmi:id="_bDDZKQrAEemBLfN8dotJHQ" visibility="public" type="_bDDZIArAEemBLfN8dotJHQ" association="_bDDZKArAEemBLfN8dotJHQ"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_FnC1HBEDEemep-lZ9VLm1Q" name="Transaction">
+    <ownedAttribute xmi:id="_FnC1HREDEemep-lZ9VLm1Q" name="depositPayment" visibility="public" type="_FnC1EREDEemep-lZ9VLm1Q" association="_FnC1IhEDEemep-lZ9VLm1Q"/>
+    <ownedAttribute xmi:id="_FnC1HhEDEemep-lZ9VLm1Q" name="bookingPayment" visibility="public" type="_FnC1GBEDEemep-lZ9VLm1Q" association="_FnC1JBEDEemep-lZ9VLm1Q"/>
+    <ownedAttribute xmi:id="_FnC1HxEDEemep-lZ9VLm1Q" name="Amount" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_FnC1IBEDEemep-lZ9VLm1Q" name="Reference" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_FnC1IREDEemep-lZ9VLm1Q" name="TransDate" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_FnC1IhEDEemep-lZ9VLm1Q" memberEnd="_FnC1HREDEemep-lZ9VLm1Q _FnC1IxEDEemep-lZ9VLm1Q">
+    <ownedEnd xmi:id="_FnC1IxEDEemep-lZ9VLm1Q" visibility="public" type="_FnC1HBEDEemep-lZ9VLm1Q" association="_FnC1IhEDEemep-lZ9VLm1Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_FnC1JBEDEemep-lZ9VLm1Q" memberEnd="_FnC1HhEDEemep-lZ9VLm1Q _FnC1JREDEemep-lZ9VLm1Q">
+    <ownedEnd xmi:id="_FnC1JREDEemep-lZ9VLm1Q" visibility="public" type="_FnC1HBEDEemep-lZ9VLm1Q" association="_FnC1JBEDEemep-lZ9VLm1Q"/>
   </packagedElement>
 </uml:Model>
