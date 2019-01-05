@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_hQpY4BEEEemep-lZ9VLm1Q" name="turo">
+  <eAnnotations xmi:id="_hQpY4REEEemep-lZ9VLm1Q" source="Objing">
+    <contents xmi:type="uml:Property" xmi:id="_hQpY4hEEEemep-lZ9VLm1Q" name="exporterVersion">
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_hQpY4xEEEemep-lZ9VLm1Q" value="3.0.0"/>
+    </contents>
+  </eAnnotations>
+  <packagedElement xmi:type="uml:Class" xmi:id="_hQpY5BEEEemep-lZ9VLm1Q" name="User">
+    <ownedAttribute xmi:id="_hQpY5REEEemep-lZ9VLm1Q" name="creates" visibility="public" type="_hQr1PREEEemep-lZ9VLm1Q" association="_hQpY6xEEEemep-lZ9VLm1Q"/>
+    <ownedAttribute xmi:id="_hQpY5hEEEemep-lZ9VLm1Q" name="Name" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_hQpY5xEEEemep-lZ9VLm1Q" name="Email" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_hQpY6BEEEemep-lZ9VLm1Q" name="PhoneNumber" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_hQpY6REEEemep-lZ9VLm1Q" name="Location" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_hQpY6hEEEemep-lZ9VLm1Q" name="BirthDate" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_hQpY6xEEEemep-lZ9VLm1Q" memberEnd="_hQpY5REEEemep-lZ9VLm1Q _hQpY7BEEEemep-lZ9VLm1Q">
+    <ownedEnd xmi:id="_hQpY7BEEEemep-lZ9VLm1Q" visibility="public" type="_hQpY5BEEEemep-lZ9VLm1Q" association="_hQpY6xEEEemep-lZ9VLm1Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_hQpY7REEEemep-lZ9VLm1Q" name="VehicleInfo">
+    <ownedAttribute xmi:id="_hQpY7hEEEemep-lZ9VLm1Q" name="Seats" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_hQpY7xEEEemep-lZ9VLm1Q" name="Doors" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_hQpY8BEEEemep-lZ9VLm1Q" name="Model" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_hQpY8REEEemep-lZ9VLm1Q" name="Year" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_hQpY8hEEEemep-lZ9VLm1Q" name="FuelType" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_hQpY8xEEEemep-lZ9VLm1Q" name="Type" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_hQpY9BEEEemep-lZ9VLm1Q" name="Brand" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_hQpY9REEEemep-lZ9VLm1Q" name="Color" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_hQpY9hEEEemep-lZ9VLm1Q" name="Vehicle">
+    <ownedAttribute xmi:id="_hQpY9xEEEemep-lZ9VLm1Q" name="vehicleInfo" visibility="public" type="_hQpY7REEEemep-lZ9VLm1Q" association="_hQr1JxEEEemep-lZ9VLm1Q"/>
+    <ownedAttribute xmi:id="_hQr1IBEEEemep-lZ9VLm1Q" name="isReserved" visibility="public" type="_hQr1PREEEemep-lZ9VLm1Q" association="_hQr1KhEEEemep-lZ9VLm1Q"/>
+    <ownedAttribute xmi:id="_hQr1IREEEemep-lZ9VLm1Q" name="DailyPrice" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_hQr1IhEEEemep-lZ9VLm1Q" name="Description" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_hQr1IxEEEemep-lZ9VLm1Q" name="Rating" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_hQr1JBEEEemep-lZ9VLm1Q" name="NumberTrips" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_hQr1JREEEemep-lZ9VLm1Q" name="Plate" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_hQr1JhEEEemep-lZ9VLm1Q" name="Odometer" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_hQr1JxEEEemep-lZ9VLm1Q" memberEnd="_hQpY9xEEEemep-lZ9VLm1Q _hQr1KBEEEemep-lZ9VLm1Q">
+    <ownedEnd xmi:id="_hQr1KBEEEemep-lZ9VLm1Q" visibility="public" type="_hQpY9hEEEemep-lZ9VLm1Q" association="_hQr1JxEEEemep-lZ9VLm1Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hQr1KREEEemep-lZ9VLm1Q" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_hQr1KhEEEemep-lZ9VLm1Q" memberEnd="_hQr1IBEEEemep-lZ9VLm1Q _hQr1KxEEEemep-lZ9VLm1Q">
+    <ownedEnd xmi:id="_hQr1KxEEEemep-lZ9VLm1Q" visibility="public" type="_hQpY9hEEEemep-lZ9VLm1Q" association="_hQr1KhEEEemep-lZ9VLm1Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_hQr1LBEEEemep-lZ9VLm1Q" name="CarOwner">
+    <generalization xmi:id="_hQr1LREEEemep-lZ9VLm1Q" general="_hQpY5BEEEemep-lZ9VLm1Q"/>
+    <ownedAttribute xmi:id="_hQr1LhEEEemep-lZ9VLm1Q" name="owns" visibility="public" type="_hQpY9hEEEemep-lZ9VLm1Q" association="_hQr1MxEEEemep-lZ9VLm1Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hQr1LxEEEemep-lZ9VLm1Q" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_hQr1MBEEEemep-lZ9VLm1Q" name="Rating" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_hQr1MREEEemep-lZ9VLm1Q" name="ResponseRate" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_hQr1MhEEEemep-lZ9VLm1Q" name="TripNumber" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_hQr1MxEEEemep-lZ9VLm1Q" memberEnd="_hQr1LhEEEemep-lZ9VLm1Q _hQr1NBEEEemep-lZ9VLm1Q">
+    <ownedEnd xmi:id="_hQr1NBEEEemep-lZ9VLm1Q" visibility="public" type="_hQr1LBEEEemep-lZ9VLm1Q" association="_hQr1MxEEEemep-lZ9VLm1Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_hQr1NREEEemep-lZ9VLm1Q" name="Insurance">
+    <ownedAttribute xmi:id="_hQr1NhEEEemep-lZ9VLm1Q" name="reservationInsurance" visibility="public" type="_hQr1PREEEemep-lZ9VLm1Q" association="_hQr1OxEEEemep-lZ9VLm1Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hQr1NxEEEemep-lZ9VLm1Q" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_hQr1OBEEEemep-lZ9VLm1Q" name="InsuranceType" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_hQr1OREEEemep-lZ9VLm1Q" name="Price" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_hQr1OhEEEemep-lZ9VLm1Q" name="DepositValue" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_hQr1OxEEEemep-lZ9VLm1Q" memberEnd="_hQr1NhEEEemep-lZ9VLm1Q _hQr1PBEEEemep-lZ9VLm1Q">
+    <ownedEnd xmi:id="_hQr1PBEEEemep-lZ9VLm1Q" visibility="public" type="_hQr1NREEEemep-lZ9VLm1Q" association="_hQr1OxEEEemep-lZ9VLm1Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_hQr1PREEEemep-lZ9VLm1Q" name="Reservation">
+    <ownedAttribute xmi:id="_hQr1PhEEEemep-lZ9VLm1Q" name="booking" visibility="public" type="_hQr1RBEEEemep-lZ9VLm1Q" association="_hQr1QhEEEemep-lZ9VLm1Q"/>
+    <ownedAttribute xmi:id="_hQr1PxEEEemep-lZ9VLm1Q" name="Price" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_hQr1QBEEEemep-lZ9VLm1Q" name="StartDate" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_hQr1QREEEemep-lZ9VLm1Q" name="EndDate" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_hQr1QhEEEemep-lZ9VLm1Q" memberEnd="_hQr1PhEEEemep-lZ9VLm1Q _hQr1QxEEEemep-lZ9VLm1Q">
+    <ownedEnd xmi:id="_hQr1QxEEEemep-lZ9VLm1Q" visibility="public" type="_hQr1PREEEemep-lZ9VLm1Q" association="_hQr1QhEEEemep-lZ9VLm1Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_hQr1RBEEEemep-lZ9VLm1Q" name="Booking">
+    <ownedAttribute xmi:id="_hQr1RREEEemep-lZ9VLm1Q" name="Price" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_hQr1RhEEEemep-lZ9VLm1Q" name="FuelPrice" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_hQr1RxEEEemep-lZ9VLm1Q" name="FuelUsed" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_hQr1SBEEEemep-lZ9VLm1Q" name="Transaction">
+    <ownedAttribute xmi:id="_hQr1SREEEemep-lZ9VLm1Q" name="depositPayment" visibility="public" type="_hQr1PREEEemep-lZ9VLm1Q" association="_hQr1ThEEEemep-lZ9VLm1Q"/>
+    <ownedAttribute xmi:id="_hQr1ShEEEemep-lZ9VLm1Q" name="bookingPayment" visibility="public" type="_hQr1RBEEEemep-lZ9VLm1Q" association="_hQr1UBEEEemep-lZ9VLm1Q"/>
+    <ownedAttribute xmi:id="_hQr1SxEEEemep-lZ9VLm1Q" name="Amount" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_hQr1TBEEEemep-lZ9VLm1Q" name="Reference" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_hQr1TREEEemep-lZ9VLm1Q" name="TransDate" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_hQr1ThEEEemep-lZ9VLm1Q" memberEnd="_hQr1SREEEemep-lZ9VLm1Q _hQr1TxEEEemep-lZ9VLm1Q">
+    <ownedEnd xmi:id="_hQr1TxEEEemep-lZ9VLm1Q" visibility="public" type="_hQr1SBEEEemep-lZ9VLm1Q" association="_hQr1ThEEEemep-lZ9VLm1Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_hQr1UBEEEemep-lZ9VLm1Q" memberEnd="_hQr1ShEEEemep-lZ9VLm1Q _hQr1UREEEemep-lZ9VLm1Q">
+    <ownedEnd xmi:id="_hQr1UREEEemep-lZ9VLm1Q" visibility="public" type="_hQr1SBEEEemep-lZ9VLm1Q" association="_hQr1UBEEEemep-lZ9VLm1Q"/>
+  </packagedElement>
+</uml:Model>

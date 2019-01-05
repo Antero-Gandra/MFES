@@ -1,0 +1,10 @@
+class Transaction
+	
+instance variables
+  depositPayment:Reservation;
+  bookingPayment:Booking;
+  Amount:real;
+  Reference:seq of (char);
+  TransDate:Reservation`Date;
+
+end Transaction

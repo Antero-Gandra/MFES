@@ -1,0 +1,8 @@
+class Insurance
+instance variables
+  reservationInsurance:set of (Reservation);
+  InsuranceType:seq of (char);
+  Price:real;
+  DepositValue:real;
+
+end Insurance

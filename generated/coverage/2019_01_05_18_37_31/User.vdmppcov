@@ -1,0 +1,11 @@
+class User
+	
+instance variables
+  creates:[Reservation] := nil;
+  Name:seq of (char) := [];
+  Email:seq of (char) := [];
+  PhoneNumber:int := 0;
+  Location:seq of (char) := [];
+  BirthDate:Reservation`Date;
+
+end User

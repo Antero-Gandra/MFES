@@ -1,0 +1,12 @@
+class Vehicle
+instance variables
+  vehicleInfo:[VehicleInfo] := nil;
+  isReserved:[Reservation] := nil;
+  DailyPrice:real := 0;
+  Description:seq of (char) := [];
+  Rating:real := 0;
+  NumberTrips:int := 0;
+  Plate:seq of (char) := [];
+  Odometer:int := 0;
+
+end Vehicle

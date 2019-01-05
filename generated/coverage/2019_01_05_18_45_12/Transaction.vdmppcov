@@ -1,0 +1,10 @@
+class Transaction
+	
+instance variables
+  depositPayment:[Reservation] := nil;
+  bookingPayment:[Booking] := nil;
+  Amount:real := 0;
+  Reference:seq of (char) := [];
+  TransDate:Reservation`Date;
+
+end Transaction

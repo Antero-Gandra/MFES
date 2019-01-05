@@ -1,0 +1,10 @@
+class CarOwner
+instance variables
+  cars:set of (Vehicle) := {};
+  Rating:real := 0;
+  ResponseRate:int := 0;
+  TripNumber:int := 0;
+  
+  inv Rating >= 0 and ResponseRate >= 0 and TripNumber >= 0;
+
+end CarOwner

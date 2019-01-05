@@ -1,0 +1,14 @@
+class Insurance
+
+types
+	public Grade = <BASIC> | <INTERMEDIATE> | <MAXIMUM>
+
+instance variables
+  reservationInsurance:set of (Reservation) := {};
+  InsuranceType:Grade := <BASIC>;
+  Price:real := 0;
+  DepositValue:real := 500;
+  
+  inv Price >= 0 and DepositValue >= 0;
+
+end Insurance

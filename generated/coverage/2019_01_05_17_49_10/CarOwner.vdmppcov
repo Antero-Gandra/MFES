@@ -1,0 +1,8 @@
+class CarOwner
+instance variables
+  owns:set of (Vehicle);
+  Rating:real;
+  ResponseRate:int;
+  TripNumber:int;
+
+end CarOwner
