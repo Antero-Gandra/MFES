@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c63ba98f-a54b-4635-aab8-d39cd79dc7fc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Turo/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../classes/CarOwnerTest.vdmpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../classes/TuroTest.vdmpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../classes/TuroTest.vdmpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../classes/UserTest.vdmpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../classes/Vehicle.vdmpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../classes/Vehicle.vdmpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_47_29/Booking.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_47_29/Booking.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_47_29/CarOwner.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_47_29/CarOwner.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_47_29/CarOwnerTest.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_47_29/CarOwnerTest.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_47_29/Date.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_47_29/Date.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_47_29/Insurance.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_47_29/Insurance.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_47_29/Report.docxcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_47_29/Reservation.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_47_29/Reservation.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_47_29/Transaction.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_47_29/Transaction.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_47_29/Turo.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_47_29/Turo.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_47_29/TuroTest.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_47_29/TuroTest.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_47_29/User.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_47_29/User.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_47_29/UserTest.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_47_29/UserTest.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_47_29/Vehicle.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_47_29/Vehicle.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_47_29/VehicleInfo.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_47_29/VehicleInfo.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_36/Booking.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_36/Booking.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_36/CarOwner.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_36/CarOwner.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_36/CarOwnerTest.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_36/CarOwnerTest.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_36/Date.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_36/Date.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_36/Insurance.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_36/Insurance.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_36/Report.docxcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_36/Reservation.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_36/Reservation.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_36/Transaction.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_36/Transaction.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_36/Turo.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_36/Turo.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_36/TuroTest.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_36/TuroTest.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_36/User.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_36/User.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_36/UserTest.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_36/UserTest.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_36/Vehicle.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_36/Vehicle.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_36/VehicleInfo.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_36/VehicleInfo.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_37/Booking.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_37/CarOwner.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_37/CarOwnerTest.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_37/Date.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_37/Insurance.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_37/Report.docxcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_37/Reservation.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_37/Transaction.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_37/Turo.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_37/TuroTest.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_37/User.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_37/UserTest.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_37/Vehicle.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_53_37/VehicleInfo.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_21/Booking.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_21/Booking.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_21/CarOwner.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_21/CarOwner.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_21/CarOwnerTest.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_21/CarOwnerTest.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_21/Date.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_21/Date.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_21/Insurance.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_21/Insurance.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_21/Report.docxcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_21/Reservation.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_21/Reservation.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_21/Transaction.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_21/Transaction.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_21/Turo.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_21/Turo.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_21/TuroTest.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_21/TuroTest.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_21/User.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_21/User.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_21/UserTest.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_21/UserTest.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_21/Vehicle.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_21/Vehicle.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_21/VehicleInfo.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_21/VehicleInfo.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_22/Booking.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_22/CarOwner.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_22/CarOwnerTest.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_22/Date.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_22/Insurance.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_22/Report.docxcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_22/Reservation.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_22/Transaction.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_22/Turo.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_22/TuroTest.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_22/User.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_22/UserTest.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_22/Vehicle.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_22/VehicleInfo.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_38/Booking.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_38/Booking.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_38/CarOwner.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_38/CarOwner.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_38/CarOwnerTest.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_38/CarOwnerTest.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_38/Date.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_38/Date.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_38/Insurance.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_38/Insurance.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_38/Report.docxcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_38/Reservation.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_38/Reservation.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_38/Transaction.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_38/Transaction.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_38/Turo.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_38/Turo.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_38/TuroTest.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_38/TuroTest.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_38/User.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_38/User.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_38/UserTest.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_38/UserTest.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_38/Vehicle.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_38/Vehicle.vdmppcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_38/VehicleInfo.vdmpp.covtbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coverage/2019_01_07_06_54_38/VehicleInfo.vdmppcov" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Turo/TuroTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Turo/Turo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Turo/main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Turo/Insurance.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="10" column="57" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Turo/quotes/BASICQuote.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/Turo/Insurance.java" />
+        <option value="$PROJECT_DIR$/src/Turo/main.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="877" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Turo" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546853703281" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="project.propGUI" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="TuroApp" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Turo.main" />
+      <module name="generated" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c63ba98f-a54b-4635-aab8-d39cd79dc7fc" name="Default Changelist" comment="" />
+      <created>1546853106591</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1546853106591</updated>
+      <workItem from="1546853108268" duration="551000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="551000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" weight="0.3299363" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3299363" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Turo/Turo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Turo/quotes/BASICQuote.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Turo/Insurance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="57" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Turo/TuroTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Turo/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
