@@ -63,7 +63,7 @@ operations
 	 (
 	 	dcl date1 : Date := new Date(14,1,2019);
 	 	dcl date2 : Date := new Date(22,1,2019);
-	 	dcl date3 : Date := new Date(24,1,2019);
+	 	dcl date3 : Date := new Date(20,1,2019);
 	 	dcl date4 : Date := new Date(28,1,2019);
 	 	dcl basicGrade : Insurance`Grade := <INTERMEDIATE>;
 	 	dcl basicInsurance : Insurance := t.getInsurance(basicGrade);

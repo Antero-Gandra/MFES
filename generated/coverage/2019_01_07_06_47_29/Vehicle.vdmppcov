@@ -111,7 +111,7 @@ operations
 			(
 				reservations := reservations union {reservation};
 			)
-			pre reservation not in set reservations and not exists r in set reservations & reservation.getStartDate().IsBefore(r.getEndDate())
+			pre reservation not in set reservations and forall r in set reservations & reservation.getStartDate().getMonth() <> r.getEndDate().getMonth()
 			post reservation in set reservations;
 			
 	/*
