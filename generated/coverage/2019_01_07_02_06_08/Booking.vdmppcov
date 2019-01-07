@@ -1,0 +1,72 @@
+class Booking
+instance variables
+  Transaction:[Transaction] := nil;
+  Price:real := 0;
+  FuelPrice:real := 0;
+  FuelUsed:real := 0;
+  
+  inv Price >= 0 and FuelPrice >= 0 and FuelUsed >= 0;
+operations
+
+	/*
+	* Constructor of the Booking class
+	* Pre:
+	* - At least one day of booking, and positive
+	* value for fuelPrice and fuel usage,
+	* Post:
+	* - The class atributes must be correctly instantiated
+	*/	
+	public Booking : real * real * real ==> Booking
+	Booking(daysPrice, fuelPrice, fuelUsed) ==
+		(
+			Price := daysPrice;
+			FuelPrice := fuelPrice;
+			FuelUsed := fuelUsed;
+			return self
+		)
+		pre daysPrice > 0 and fuelPrice >= 0 and fuelUsed >= 0
+		post FuelPrice = fuelPrice and FuelUsed = fuelUsed and Transaction = nil and RESULT = self;
+ 
+ 	/*
+	* Get the booking total price (booking price + total fuel price)
+	* Post:
+	* - The price must be the valid operation
+	*/	
+	public pure getTotalPrice : () ==> real
+	getTotalPrice() == 
+		return Price + (FuelPrice * FuelUsed)
+		post RESULT = Price + (FuelPrice * FuelUsed);
+		
+	/*
+	* Get the booking payed
+	*/	
+	public pure isPayed : () ==> bool
+	isPayed() == 
+		(
+			if Transaction <> nil 
+			then 
+				return true 
+			else
+				return false
+		);
+		
+	/*
+	* Set the booking payed
+	* Pre:
+	* - The booking must not have been payed yet
+	* Post:
+	* - The object value must be the same of parameter
+	*/	
+	public setPayed : [Transaction] ==> ()
+	setPayed(transaction) ==
+		(
+			dcl user : User := Turo`getUserByBooking(self);
+			dcl vehicle : Vehicle := Turo`getVehicleByBooking(self);
+			Turo`addTransaction(transaction);
+			user.removeReservation();
+			vehicle.deliver();
+			Transaction := transaction;
+		)
+		pre Transaction = nil
+		post Transaction = transaction;
+end Booking

@@ -1,9 +1,0 @@
-class Booking
-instance variables
-  Price:real := 0;
-  FuelPrice:real := 0;
-  FuelUsed:real := 0;
-  
-  inv Price >= 0 and FuelPrice >= 0 and FuelUsed >= 0;
-
-end Booking

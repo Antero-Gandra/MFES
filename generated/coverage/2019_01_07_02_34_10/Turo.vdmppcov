@@ -1,0 +1,283 @@
+class Turo
+
+types
+	
+values
+-- TODO Define values here
+instance variables
+	static users: set of (User) := {};
+	static carOwners: set of (CarOwner) := {};
+	static insurances: set of (Insurance) := {};
+	static transactions: set of (Transaction) := {};
+	public static CurrentDate : Date := new Date(7,1,2019);
+	static cancellationFee: nat := 50;
+operations
+	public Turo : () ==> Turo
+	Turo() ==
+		return self
+		pre true
+		post users = {};
+		
+	/* 
+	* Add user to system
+	* Pre:
+	* - No user must be registered with the same email
+	* Post:
+	* - New user is added to the system 
+	*/
+	public addUser : User ==> ()
+	addUser(user) == 
+		users := users union {user}
+		pre not exists u in set users & u.getEmail() = user.getEmail() and not exists o in set carOwners & o.getEmail() = user.getEmail()
+		post user in set users;
+		
+	/* 
+	* Add carOwner to system
+	* Pre:
+	* - No carOwner must be registered with the same email
+	* Post:
+	* - New carOwner is added to the system 
+	*/
+	public addCarOwner : CarOwner ==> ()
+	addCarOwner(user) == 
+		carOwners := carOwners union {user}
+		pre not exists u in set users & u.getEmail() = user.getEmail() and not exists o in set carOwners & o.getEmail() = user.getEmail()
+		post user in set carOwners;
+	
+	/* 
+	* Add insurance type to system
+	* Pre:
+	* - No insurance must be registered with the same grade
+	* Post:
+	* - New insurance is added to the system 
+	*/
+	public addInsurance : Insurance ==> ()
+	addInsurance(insurance) == 
+		insurances := insurances union {insurance}
+		pre not exists u in set insurances & u.getInsuranceType() = insurance.getInsuranceType()
+		post insurance in set insurances;
+		
+	/* 
+	* Add transaction to system
+	* Pre:
+	* - No transaction must be registered with the same id
+	* Post:
+	* - New transaction is added to the system 
+	*/
+	static public addTransaction : [Transaction] ==> ()
+	addTransaction(transaction) == 
+		transactions := transactions union {transaction}
+		pre not exists u in set transactions & u.getId() = transaction.getId()
+		post transaction in set transactions;
+	
+	/* 
+	* Get insurance from system by type
+	* Pre:
+	* - No insurance must be registered with the same grade
+	* Post:
+	* - New insurance is added to the system 
+	*/
+	public getInsurance : Insurance`Grade ==> Insurance
+	getInsurance(grade) == 
+		(
+			dcl insurance: Insurance;
+			for all o in set insurances do
+				if (grade = o.getInsuranceType()) then insurance := o;
+			return insurance
+		)
+		pre true
+		post RESULT in set insurances and RESULT.getInsuranceType() = grade;
+	
+	/* 
+	* Get the system's users
+	* Post:
+	* - The operation result is the system's users 
+	*/	
+	public pure getUsers : () ==> set of User 
+	getUsers() ==
+		return users
+		post RESULT = users;
+		
+	/* 
+	* Get the system's carOwners
+	* Post:
+	* - The operation result is the system's carOwners 
+	*/	
+	public pure getCarOwners : () ==> set of CarOwner 
+	getCarOwners() ==
+		return carOwners
+		post RESULT = carOwners;
+		
+	/* 
+	* Get the system's insurances
+	* Post:
+	* - The operation result is the system's insurances 
+	*/	
+	public pure getInsurances : () ==> set of Insurance 
+	getInsurances() ==
+		return insurances
+		post RESULT = insurances;
+		
+	/* 
+	* Get the system's transactions
+	* Post:
+	* - The operation result is the system's transactions 
+	*/	
+	public pure getTransactions : () ==> set of Transaction 
+	getTransactions() ==
+		return transactions
+		post RESULT = transactions;
+		
+	/* 
+	* Get the system's cancellationfee
+	* Post:
+	* - The operation result is the system's cancellation fee 
+	*/	
+	static public pure getCancelFee : () ==> nat 
+	getCancelFee() ==
+		return cancellationFee
+		post RESULT = cancellationFee;
+		
+	/* 
+	* Get a user by email
+	* Post:
+	* - The operation result is the user of given email
+	*/	
+	public pure getUser: seq of (char) ==> User
+	getUser(email) ==
+		(
+		dcl user: User;
+		dcl allUsers : set of (User) := users union carOwners;
+		for all o in set allUsers do
+			if (email = o.getEmail()) then user := o;
+		return user
+		)
+		pre true
+		post RESULT in set users or RESULT in set carOwners and RESULT.getEmail() = email;
+			
+	/* 
+	* Get a CarOwner by car
+	* Post:
+	* - The operation result is a user who posesses the given car
+	*/	
+	static public pure getUser: [Vehicle] ==> CarOwner
+	getUser(vehicle) ==
+		(
+		dcl user: CarOwner;
+		for all o in set carOwners do
+			for all c in set o.getCars() do
+				if (vehicle = c) then user := o;
+			return user
+		)
+		pre true
+		post RESULT in set carOwners and vehicle in set RESULT.getCars();			
+			
+	/* 
+	* Get a user by Booking
+	* Post:
+	* - The operation result is the user of given Booking
+	*/	
+	static public pure getUserByBooking: [Booking] ==> [User]
+	getUserByBooking(booking) ==
+		(
+		dcl user: User;
+		dcl allUsers : set of (User) := users union carOwners;
+		for all o in set allUsers do
+			if (o.getReservation() <> nil)
+			then
+				if (booking = o.getReservation().getBooking()) then user := o;
+		return user
+		)
+		pre booking <> nil
+		post RESULT in set users or RESULT in set carOwners and RESULT.getReservation().getBooking() = booking;
+		
+	/* 
+	* Get a car by plate
+	* Post:
+	* - The operation result is the car of given plate
+	*/	
+	public pure getVehicle: seq of (char) ==> Vehicle
+	getVehicle(plate) ==
+		(
+		dcl owner: CarOwner;
+		dcl car: Vehicle;
+		for all o in set carOwners do
+			for all c in set o.getCars() do
+				if (plate = c.getPlate()) then
+				(
+					owner := o;
+					car := c;
+				);
+			return car
+		)
+		pre true
+		post RESULT.getPlate() = plate;
+		
+		/* 
+	* Get a car by Reservation
+	* Post:
+	* - The operation result is the car of given reservation
+	*/	
+	static public pure getVehicle: [Reservation] ==> [Vehicle]
+	getVehicle(reservation) ==
+		(
+		dcl owner: CarOwner;
+		dcl car: Vehicle;
+		for all o in set carOwners do
+			for all c in set o.getCars() do
+				if (reservation = c.getReservation()) then
+				(
+					owner := o;
+					car := c;
+				);
+			return car
+		)
+		pre true
+		post RESULT.getReservation() = reservation;
+		
+			/* 
+	* Get a Insurance by Reservation
+	* Post:
+	* - The operation result is the Insurance which has the given reservation
+	*/	
+	static public pure getInsuranceByReservation: [Reservation] ==> [Insurance]
+	getInsuranceByReservation(reservation) ==
+		(
+		dcl insurance: Insurance;
+		for all i in set insurances do
+			for all r in set i.getReservations() do
+				if (reservation = r) then insurance := i;
+			return insurance
+		)
+		pre true
+		post RESULT in set insurances and reservation in set RESULT.getReservations();
+		
+	/* 
+	* Get a car by Booking
+	* Post:
+	* - The operation result is the car of given booking
+	*/	
+	static public pure getVehicleByBooking: [Booking] ==> [Vehicle]
+	getVehicleByBooking(booking) ==
+		(
+		dcl owner: CarOwner;
+		dcl car: Vehicle;
+		for all o in set carOwners do
+			for all c in set o.getCars() do
+				if (c.getReservation() <> nil)
+				then
+					if (booking = c.getReservation().getBooking()) then
+					(
+						owner := o;
+						car := c;
+					);
+			return car
+		)
+		pre true
+		post RESULT.getReservation().getBooking() = booking;
+		
+functions
+	
+traces
+-- TODO Define Combinatorial Test Traces here
+end Turo

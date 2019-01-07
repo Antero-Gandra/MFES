@@ -1,0 +1,171 @@
+class TuroTest
+types
+-- TODO Define types here
+values
+-- TODO Define values here
+instance variables
+	 t : Turo := new Turo();
+operations
+	 private assertTrue: bool ==> ()
+	 assertTrue(cond) == return
+	 pre cond;
+	 
+	 public addOwners() == 
+	 (
+	  dcl date1 : Date := new Date(4, 2, 1996);
+	  dcl owner1 : CarOwner := new CarOwner("luis", "luis@feup.pt", 912442675, "porto", "H-CZ38S-4", date1);
+	 	dcl sizeBefore : nat := card t.getCarOwners();
+	 	t.addCarOwner(owner1);
+	 	assertTrue(card t.getCarOwners() = sizeBefore + 1);
+	 );
+	 
+	 public addClients() == 
+	 (
+	  dcl date1 : Date := new Date(9, 10, 1996);
+	  dcl date2 : Date := new Date(2, 4, 1997);
+	  dcl user1 : User := new User("igor", "igor@feup.pt", 912345678, "porto", "H-2388S-1",date1);
+	  dcl user2 : User := new User("antero", "antero@feup.pt", 912345675, "porto", "H-2AC8S-3", date2);
+	 	dcl sizeBefore : nat := card t.getUsers();
+	 	t.addUser(user1);
+	 	assertTrue(card t.getUsers() = sizeBefore + 1);
+	 	t.addUser(user2);
+	 	assertTrue(card t.getUsers() = sizeBefore + 2);
+	 );
+	 
+	 public addVehicles() == 
+	 (
+	  dcl vehicleInfo1 : VehicleInfo := new VehicleInfo(3, 3, "Serie 1", 2013, "diesel", "coupe", "bwm", "black");
+	  dcl vehicle1 : Vehicle := new Vehicle(vehicleInfo1, 10, "grande carro", "aa-23-du", 3390);
+	  dcl vehicle2 : Vehicle := new Vehicle(vehicleInfo1, 10, "grande carro", "df-99-au", 3390);
+	  dcl owner : CarOwner := t.getUser("luis@feup.pt");
+	 	dcl sizeBefore : nat := card owner.getCars();
+	 	owner.addVehicle(vehicle1);
+	 	owner.addVehicle(vehicle2);
+	 	assertTrue(card owner.getCars() = sizeBefore + 2);
+	 );
+	 
+	 public addInsurances() == 
+	 (
+	 	dcl sizeBefore : nat := card t.getInsurances();
+	 	dcl basicGrade : Insurance`Grade := <BASIC>;
+	 	dcl mediumGrade : Insurance`Grade := <INTERMEDIATE>;
+	 	dcl maximumGrade : Insurance`Grade := <MAXIMUM>;
+	 	dcl basicInsurance : Insurance := new Insurance(basicGrade, 0, 500);
+		dcl intermediateInsurance : Insurance := new Insurance(mediumGrade, 10, 300);
+		dcl maximumInsurance : Insurance := new Insurance(maximumGrade, 20, 0);
+		t.addInsurance(basicInsurance);
+		t.addInsurance(intermediateInsurance);
+		t.addInsurance(maximumInsurance);
+	 	assertTrue(card t.getInsurances() = sizeBefore + 3);
+	 );
+	 
+	 public addReservations() ==
+	 (
+	 	dcl date1 : Date := new Date(20,1,2019);
+	 	dcl date2 : Date := new Date(25,1,2019);
+	 	dcl basicGrade : Insurance`Grade := <INTERMEDIATE>;
+	 	dcl basicInsurance : Insurance := t.getInsurance(basicGrade);
+	 	dcl sizeBeforeInsurance : nat := card basicInsurance.getReservations();
+	 	dcl reservation1 : Reservation := new Reservation(basicInsurance, date1, date2);
+	 	dcl vehicle1 : Vehicle := t.getVehicle("aa-23-du");
+	 	dcl user1 : User := t.getUser("igor@feup.pt");
+	 	dcl sizeBefore : nat := card t.getTransactions();
+	 	-- Add the reservation to the insurance
+	 	basicInsurance.addReservation(reservation1);
+	 	assertTrue(card basicInsurance.getReservations() = sizeBeforeInsurance + 1);
+	 	-- Add the reservation to the user
+	 	assertTrue(user1.getReservation() = nil);
+	 	user1.addReservation(reservation1);
+	 	assertTrue(user1.getReservation() = reservation1);
+	 	-- Add the reservation to the vehicle
+	 	assertTrue(vehicle1.getReservation() = nil);
+	 	vehicle1.addReservation(reservation1);
+	 	assertTrue(vehicle1.getReservation() = reservation1);
+	 	-- Cancel and Add the reservation to the user
+	 	user1.cancelReservation();
+	 	assertTrue(card t.getTransactions() = sizeBefore + 1);
+	 	assertTrue(user1.getReservation() = nil);
+	 	user1.addReservation(reservation1);
+	 	assertTrue(user1.getReservation() = reservation1);
+	 	-- Cancel and Add the reservation to the vehicle
+	 	assertTrue(vehicle1.getReservation() = nil);
+	 	vehicle1.addReservation(reservation1);
+	 	assertTrue(vehicle1.getReservation() = reservation1);
+	 );
+	 
+	 public payReservations() ==
+	 (
+	 	dcl date1 : Date := new Date(19,1,2019);
+	 	dcl vehicle1 : Vehicle := t.getVehicle("aa-23-du");
+	 	dcl reservation1 : Reservation := vehicle1.getReservation();
+	 	dcl transaction1 : Transaction := new Transaction(reservation1.getPrice(), date1);
+	 	dcl sizeBefore : nat := card t.getTransactions();
+	 	assertTrue(not reservation1.isPayed());
+	 	reservation1.setPayed(transaction1);
+	 	assertTrue(reservation1.isPayed());
+	 	assertTrue(card t.getTransactions() = sizeBefore + 1);
+	 );
+	 
+	 public deliverVehicles() ==
+	 (
+	 	dcl date1 : Date := new Date(25,1,2019);
+	 	dcl user1 : User := t.getUser("igor@feup.pt");
+	 	dcl vehicle1 : Vehicle := t.getVehicle("aa-23-du");
+	 	dcl carOwner1 : CarOwner := Turo`getUser(vehicle1);
+	 	dcl reservation1 : Reservation := vehicle1.getReservation();
+	 	dcl transaction1 : Transaction;
+	 	dcl sizeBefore : nat := vehicle1.getNumberTrips();
+	 	dcl sizeBeforeTrips : nat := carOwner1.getNumberTrips();
+	 	dcl basicGrade : Insurance`Grade := <INTERMEDIATE>;
+	 	dcl basicInsurance : Insurance := t.getInsurance(basicGrade);
+	 	dcl sizeBeforeInsurance : nat := card basicInsurance.getReservations();
+	 	assertTrue(reservation1.getBooking() = nil);
+	 	assertTrue(vehicle1.getReservation() <> nil);
+	 	assertTrue(vehicle1.getRating() = 0);
+	 	assertTrue(vehicle1.getOdometer() = 0);
+	 	user1.deliverVehicle(1.3, 10, 2, 30);
+	 	-- Odometer is incremented
+	 	assertTrue(vehicle1.getOdometer() = 0);
+	 	-- First rating is equal to 2
+	 	assertTrue(vehicle1.getRating() = 2);
+	 	-- Reservation now has a booking
+	 	assertTrue(reservation1.getBooking() <> nil);
+	 	-- Test booking not payed yet
+	 	assertTrue(not reservation1.getBooking().isPayed());
+	 	transaction1 := new Transaction(reservation1.getBooking().getTotalPrice(), date1);
+	 	assertTrue(user1.getReservation() <> nil);
+	 	assertTrue(user1.getReservation().getBooking() <> nil);
+	 	assertTrue(vehicle1.getReservation() <> nil);
+	 	assertTrue(vehicle1.getReservation().getBooking() <> nil);
+	 	assertTrue(carOwner1.getRating() = 0);
+	 	-- Pay Booking
+	 	reservation1.getBooking().setPayed(transaction1);
+	 	-- Removed from insurance
+	 	assertTrue(card basicInsurance.getReservations() = sizeBeforeInsurance - 1);
+	 	-- Owner has rating <> 0
+	 	assertTrue(carOwner1.getRating() = 2);
+	 	-- Has 1 more trip now
+	 	assertTrue(vehicle1.getNumberTrips()  = sizeBefore + 1);
+	 	assertTrue(carOwner1.getNumberTrips()  = sizeBeforeTrips + 1);
+	 	assertTrue(user1.getReservation() = nil);
+	 	assertTrue(vehicle1.getReservation() = nil);
+	 	--Test Booking payed
+	 	assertTrue(reservation1.getBooking().isPayed());
+	 );
+	 
+	 public static main() ==
+		 (
+			 dcl turoTest: TuroTest := new TuroTest();
+			 turoTest.addInsurances();
+			 turoTest.addClients();
+			 turoTest.addOwners();
+			 turoTest.addVehicles();
+			 turoTest.addReservations();
+			 turoTest.payReservations();
+			 turoTest.deliverVehicles();
+		 );
+functions
+-- TODO Define functiones here
+traces
+-- TODO Define Combinatorial Test Traces here
+end TuroTest

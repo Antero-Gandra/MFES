@@ -1,0 +1,94 @@
+class CarOwner is subclass of User
+instance variables
+  cars:set of (Vehicle) := {};
+  Rating:real := 0;
+  ResponseRate:int := 0;
+  TripNumber:int := 0;
+  
+  inv Rating >= 0 and Rating <= 5 and ResponseRate >= 0 and TripNumber >= 0;
+
+operations
+	/*
+	* Constructor of the CarOwner class
+	* Pre:
+	* - All user data should be valid
+	* Post:
+	* - The class atributes must be correctly instantiated
+	*/	
+	public CarOwner : seq of (char) * seq of (char) * int * seq of (char) * seq of (char) * Date ==> CarOwner
+ 	CarOwner(name, email, phone, location, license, birth) ==
+	 	(
+			Name := name;
+			Email := email;
+			PhoneNumber := phone;
+			Location := location;
+			License := license;
+			BirthDate := birth;
+			return self;
+		)
+		pre len name > 0 and len email > 0 and phone < 1000000000 and len location > 0
+		post card cars = 0 and Name = name and Email = email and PhoneNumber = phone and Location = location and BirthDate = birth and RESULT = self;
+
+	public addVehicle : Vehicle ==> ()
+	addVehicle(vehicle) ==
+		cars := cars union {vehicle}
+		pre not exists u in set cars & u.getPlate() = vehicle.getPlate();
+		
+	/* 
+	* Get the user's cars
+	* Post:
+	* - The operation result is the user's cars 
+	*/	
+	public pure getCars : () ==> set of Vehicle 
+	getCars() ==
+		return cars
+		post RESULT = cars;
+		
+	/* 
+	* Get the owner total trip number
+	* Post:
+	* - The operation result is the user's trip number 
+	*/	
+	public pure getNumberTrips : () ==> nat 
+	getNumberTrips() ==
+		return TripNumber
+		post RESULT = TripNumber;
+		
+	/* 
+	* calculate the owner rating
+	* Post:
+	* - The operation result is the user's rating
+	*/	
+	public calculateRating : () ==> () 
+	calculateRating() ==
+		(
+			dcl sum : real := 0;
+			for all c in set cars do
+				sum := sum + c.getRating();
+				
+			if TripNumber = 0 
+			then 
+				Rating := 0 
+			else
+				Rating := sum / TripNumber;
+		)
+		post Rating >= 0 and Rating <= 5;	
+		
+	/* 
+	* Get the owner rating
+	* Post:
+	* - The operation result is the user's rating
+	*/	
+	public pure getRating : () ==> nat 
+	getRating() ==
+		return Rating
+		post RESULT = Rating;
+		
+	/* 
+	* Increment number of trips
+	*/	
+	public incrementTrips : () ==> () 
+	incrementTrips() ==
+		TripNumber := TripNumber + 1;
+		
+end CarOwner

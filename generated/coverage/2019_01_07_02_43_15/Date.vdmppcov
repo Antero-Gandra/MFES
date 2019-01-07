@@ -1,0 +1,117 @@
+class Date
+types
+-- TODO Define types here
+values
+-- TODO Define values here
+instance variables
+	Day: nat1;
+	Month: nat1;
+	Year: nat1;
+operations
+	public Date(day: nat1, month: nat1, year: nat1) date : Date == 
+		(
+			Day := day;
+			Month := month;
+			Year := year;
+			return self;
+		)
+		pre month <= 12 and day <= 31 and day <= DaysOfMonth(month, year)
+functions
+
+	/*
+	* Check if a given year is a leap year
+	*/	
+	public static IsLeapYear(year: nat1) res : bool ==
+		year mod 4 = 0 and year mod 100 <> 0 or year mod 400 = 0;
+
+	/*
+	* Get the number of days in a given month
+	*/	
+	public DaysOfMonth(month: nat1, year: nat1) res : nat1 ==
+		if month = 2 
+		then
+			if IsLeapYear(year) 
+				then 
+					29 
+				else
+					28 
+		else
+			31 - ((month - 1) mod 7) mod 2;
+		
+operations	
+
+	/*
+	* Check if a date corresponds to 21 years or older
+	*/	
+	public pure static ValidAge : Date * Date ==> bool
+	ValidAge(dateToCheck, currentDate) ==
+		(
+			if currentDate.Year - dateToCheck.Year < 21 
+			then return false;
+			
+			if currentDate.Year - dateToCheck.Year > 21
+			then return true;
+			
+			if dateToCheck.Month < currentDate.Month
+			then return true;
+			
+			if dateToCheck.Month > currentDate.Month
+			then return false;
+			
+			if dateToCheck.Day <= currentDate.Day
+			then return true;
+			
+			if dateToCheck.Day > currentDate.Day
+			then return false;
+			
+			return false;
+		);
+		
+	/*
+	* Get the number of 24 hour periods between 2 dates
+	* Pre:
+	* - The dates must be of two conecutive months or belong to the same month
+	* Post:
+	* - The total number of days must not exced 28 and must be at least 1
+	*/	
+	public pure static CountDays : Date * Date ==> nat1
+	CountDays(beginDate, endDate) ==
+		(
+			dcl daysDateBegin : int;
+			dcl daysDateEnd : int;
+			
+			if beginDate.Month = endDate.Month 
+			then return endDate.Day  - beginDate.Day;
+			
+			return (DaysOfMonth(beginDate.Month, beginDate.Year) - beginDate.Day) +
+				endDate.Day 
+		)
+		pre beginDate.Month + 1 = endDate.Month or (beginDate.Month = 12 and endDate.Month = 1) or beginDate.Month = endDate.Month
+		post RESULT > 0 and RESULT < 28;
+
+	/*
+	* See if from a given date happens after the object
+	*/	
+	public pure IsBefore(otherDate: Date) res : bool == 
+		if otherDate.Year > Year 
+		then return true
+		else
+			if otherDate.Year = Year 
+			then 
+				if otherDate.Month > Month 
+				then return true
+				else
+					if otherDate.Month = Month 
+					then 
+						if otherDate.Day > Day 
+						then return true
+						else
+							return false
+					else
+						return false 
+			else
+				return false
+		pre true;
+traces
+-- TODO Define Combinatorial Test Traces here
+end Date

@@ -1,0 +1,78 @@
+class Insurance
+
+types
+	public Grade = <BASIC> | <INTERMEDIATE> | <MAXIMUM>
+
+instance variables
+  reservationInsurance:set of (Reservation) := {};
+  InsuranceType:Grade := <BASIC>;
+  Price:real := 0;
+  DepositValue:real := 500;
+  
+  inv Price >= 0 and DepositValue >= 0;
+
+operations
+
+	/*
+	* Constructor of the Insurance class
+	* Pre:
+	* - The insurance must be of type BASIC, INTERMEDIATE or MAXIMUM 
+	* and have valid positive values for price and deposit value 
+	* Post:
+	* - The object must have the passed parameters
+	*/	
+	public Insurance : Grade * real * real ==> Insurance
+	Insurance(grade, price, deposit) ==
+		(
+			InsuranceType := grade;
+			Price := price;
+			DepositValue := deposit;
+			return self
+		)
+		pre grade = <BASIC> or grade = <INTERMEDIATE> or grade = <MAXIMUM> and price >= 0 and deposit >= 0
+		post InsuranceType = grade and Price = price and DepositValue = deposit;
+		
+	/*
+	* Get the Insurance Type
+	* Post:
+	* - The type must be the same of the object
+	*/	
+	public pure getInsuranceType : () ==> Grade
+	getInsuranceType() == 
+		return InsuranceType
+		post RESULT = InsuranceType;
+		
+	/*
+	* Get the Insurance Price
+	* Post:
+	* - The value must be the same of the object
+	*/	
+	public pure getPrice : () ==> real
+	getPrice() == 
+		return Price
+		post RESULT = Price;
+		
+	/*
+	* Get the Insurance Deposit value
+	* Post:
+	* - The value must be the same of the object
+	*/	
+	public pure getDepositValue : () ==> real
+	getDepositValue() == 
+		return DepositValue
+		post RESULT = DepositValue;
+		
+	/*
+	* Adds a reservation to the insurance
+	* Post:
+	* - reservation must be in reservations set
+	*/		
+	public addReservation : Reservation ==> Insurance
+	addReservation(reservation) ==
+		(
+		  reservationInsurance := reservationInsurance union {reservation}; 
+		  return self
+		)
+		post reservation in set reservationInsurance;
+		 
+end Insurance

@@ -1,7 +1,0 @@
-class Booking
-instance variables
-  Price:real;
-  FuelPrice:real;
-  FuelUsed:real;
-
-end Booking
